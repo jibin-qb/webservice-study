@@ -1,6 +1,7 @@
 package webservices.jibin.com.webservicesstudy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -89,7 +90,12 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	private class AsyncCallWS extends AsyncTask<String, Void, Void> {
+    public void gotoNext(View view) {
+        Intent intent=new Intent(this,JSONStudy.class);
+        startActivity(intent);
+    }
+
+    private class AsyncCallWS extends AsyncTask<String, Void, Void> {
 		@Override
 		protected Void doInBackground(String... params) {
 			Log.i(TAG, "doInBackground");

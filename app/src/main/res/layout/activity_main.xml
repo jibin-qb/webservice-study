@@ -35,5 +35,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="" android:textSize="26dp"/>
-
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Next page"
+    android:onClick="gotoNext"/>
 </LinearLayout>
