@@ -85,22 +85,24 @@ public class JSONStudy extends Activity {
         protected String doInBackground(Void... urls) {
             return readBugzilla();
         }
+private Data processResponse(String response) throws JsonSyntaxException
+    {
 
+        Data obj = null;
+
+        Gson gson = new Gson();
+        if (responseClass() != null)
+            obj = gson.fromJson(response, Data.class);
+        Log.i("", "" + obj);
+        return obj;
+    }
         protected void onPostExecute(String data) {
 
             ArrayList<User> users = new ArrayList<User>();
             try {
                 data = "{'data':" + data + "}";
-                JSONObject jsonResponse = new JSONObject(data);
-                JSONArray cast = jsonResponse.getJSONArray("data");
-                for (int i = 0; i < cast.length(); i++) {
-                    JSONObject actor = cast.getJSONObject(i);
-                    User user = new User();
-                    user.setBody(actor.getString("body"));
-                    user.setTitle(actor.getString("title"));
-                    user.setId(actor.getString("userId"));
-                    users.add(user);
-                }
+                Data dat=processResponse(data);
+users=dat.data;
             } catch (JSONException e) {
 
             }
