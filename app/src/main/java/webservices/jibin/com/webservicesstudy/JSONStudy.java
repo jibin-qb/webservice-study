@@ -39,7 +39,9 @@ public class JSONStudy extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.json_view);
         listView = (ListView) findViewById(R.id.listView);
-        new JSONCall().execute();
+       // new JSONCall().execute();
+        VolleyStudy volleyStudy=new VolleyStudy(this);
+        volleyStudy.jsonRequest("http://jsonplaceholder.typicode.com/posts");
     }
 
     private class JSONCall extends AsyncTask<Void, Void, String> {
