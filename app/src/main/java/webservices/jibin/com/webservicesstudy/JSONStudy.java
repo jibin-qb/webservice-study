@@ -40,8 +40,10 @@ public class JSONStudy extends Activity {
         setContentView(R.layout.json_view);
         listView = (ListView) findViewById(R.id.listView);
        // new JSONCall().execute();
-        VolleyStudy volleyStudy=new VolleyStudy(this);
-        volleyStudy.jsonRequest("http://jsonplaceholder.typicode.com/posts");
+        //VolleyStudy volleyStudy=new VolleyStudy(this);
+        //volleyStudy.jsonRequest("http://jsonplaceholder.typicode.com/posts");
+       AqueryStudy study=new AqueryStudy(this);
+       study. downloadImage("http://www.online-image-editor.com//styles/2014/images/example_image.png");
     }
 
     private class JSONCall extends AsyncTask<Void, Void, String> {
