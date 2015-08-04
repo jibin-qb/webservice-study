@@ -22,7 +22,7 @@ public class BookActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_book);
-		setContentView(R.layout.activity_book);
+		;
 
 		bookTitle = (TextView) findViewById(R.id.title);
 		authorName = (TextView) findViewById(R.id.author);

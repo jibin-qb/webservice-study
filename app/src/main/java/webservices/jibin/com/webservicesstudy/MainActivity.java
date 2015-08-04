@@ -50,9 +50,9 @@ public class MainActivity extends Activity {
 	}
 
     private void initViews() {
-        et = (EditText) findViewById(R.id.editText1);
-        tv = (TextView) findViewById(R.id.tv_result);
-        b = (Button) findViewById(R.id.button1);
+//        et = (EditText) findViewById(R.id.editText1);
+//        tv = (TextView) findViewById(R.id.tv_result);
+//        b = (Button) findViewById(R.id.button1);
     }
 
     public void getFahrenheit(String celsius) {
