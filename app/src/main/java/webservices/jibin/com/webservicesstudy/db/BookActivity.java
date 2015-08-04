@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import webservices.jibin.com.webservicesstudy.R;
+
 public class BookActivity extends Activity {
 	TextView bookTitle;
 	TextView authorName;
@@ -19,6 +21,7 @@ public class BookActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 
+		setContentView(R.layout.activity_book);
 		setContentView(R.layout.activity_book);
 
 		bookTitle = (TextView) findViewById(R.id.title);

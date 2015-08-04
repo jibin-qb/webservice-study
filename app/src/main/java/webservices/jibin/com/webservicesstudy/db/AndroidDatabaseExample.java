@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
+import webservices.jibin.com.webservicesstudy.R;
+
 public class AndroidDatabaseExample extends ListActivity implements OnItemClickListener {
 	JCGSQLiteHelper db = new JCGSQLiteHelper(this);
 	List<Book> list;
