@@ -20,6 +20,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import webservices.jibin.com.webservicesstudy.R;
+
 public class AndroidCustomGalleryActivity extends Activity {
 	private int count;
 	private Bitmap[] thumbnails;
@@ -31,7 +33,7 @@ public class AndroidCustomGalleryActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.gallery);
 		
 		final String[] columns = { MediaStore.Images.Media.DATA, MediaStore.Images.Media._ID };
 		final String orderBy = MediaStore.Images.Media._ID;
