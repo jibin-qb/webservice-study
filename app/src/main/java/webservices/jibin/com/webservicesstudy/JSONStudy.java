@@ -2,6 +2,7 @@ package webservices.jibin.com.webservicesstudy;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +27,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import webservices.jibin.com.webservicesstudy.db.AndroidDatabaseExample;
+
 /**
  * Created by jibin on 20/07/15.
  */
@@ -40,10 +43,15 @@ public class JSONStudy extends Activity {
         setContentView(R.layout.json_view);
         listView = (ListView) findViewById(R.id.listView);
        // new JSONCall().execute();
+
+        Intent intent=new Intent(this, AndroidDatabaseExample.class);
+        startActivity(intent);
+
         //VolleyStudy volleyStudy=new VolleyStudy(this);
         //volleyStudy.jsonRequest("http://jsonplaceholder.typicode.com/posts");
-       AqueryStudy study=new AqueryStudy(this);
-       study. downloadImage("http://www.online-image-editor.com//styles/2014/images/example_image.png");
+//       AqueryStudy study=new AqueryStudy(this);
+//       study. downloadImage("http://www.online-image-editor.com//styles/2014/images/example_image.png");
+//>>>>>>> c45265bd175468b32fd2e65c80426a9f7c9394a7
     }
 
     private class JSONCall extends AsyncTask<Void, Void, String> {

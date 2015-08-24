@@ -2,6 +2,7 @@ package webservices.jibin.com.webservicesstudy;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.ksoap2.SoapEnvelope;
@@ -35,6 +37,12 @@ public class MainActivity extends Activity {
 
         initViews();
 
+        ImageView view=(ImageView)findViewById(R.id.imag);
+        final AnimationDrawable myAnimationDrawable
+                = (AnimationDrawable)view.getDrawable();
+
+                        myAnimationDrawable.start();
+
 		b.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				//Check if Celcius text control is not empty
@@ -50,9 +58,9 @@ public class MainActivity extends Activity {
 	}
 
     private void initViews() {
-        et = (EditText) findViewById(R.id.editText1);
-        tv = (TextView) findViewById(R.id.tv_result);
-        b = (Button) findViewById(R.id.button1);
+//        et = (EditText) findViewById(R.id.editText1);
+//        tv = (TextView) findViewById(R.id.tv_result);
+//        b = (Button) findViewById(R.id.button1);
     }
 
     public void getFahrenheit(String celsius) {
