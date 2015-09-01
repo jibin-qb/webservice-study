@@ -8,6 +8,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name="webservices.jibin.com.webservicesstudy.customview.MainActivity"
             android:label="@string/app_name" >
@@ -17,15 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".JSONStudy"
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/app_name" />
-        <activity
-            android:name="webservices.jibin.com.webservicesstudy.db.BookActivity"
-            android:label="@string/app_name" />
-             <activity
-            android:name="webservices.jibin.com.webservicesstudy.db.AndroidDatabaseExample"
-            android:label="@string/app_name" />
+        <provider android:authorities="com.facebook.app.FacebookContentProvider684188678294931"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
     </application>
 
 </manifest>

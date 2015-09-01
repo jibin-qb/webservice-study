@@ -4,15 +4,12 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical" >
-<ImageView
-    android:layout_width="match_parent"
+<Button
+    android:layout_width="wrap_content"
     android:id="@+id/imag"
-    android:layout_height="match_parent"/>
-    <ListView
-        android:id="@android:id/list"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+    android:text="Share"
+    android:onClick="postFB"
+    android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
