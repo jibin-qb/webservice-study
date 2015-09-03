@@ -11,5 +11,12 @@
     android:onClick="postFB"
     android:layout_height="wrap_content"/>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/container"
+        android:orientation="horizontal"
+        android:layout_height="fill_parent">
+
+    </LinearLayout>
 
 </LinearLayout>
